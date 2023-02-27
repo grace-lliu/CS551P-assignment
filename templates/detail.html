@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>app_store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        .product-name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .product-description {
+            margin-top: 30px;
+        }
+        
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .add-to-cart {
+            margin-top: 30px;
+            background-color: #000;
+            border-color: #000;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto" style="width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">app store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Software List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">readme.md</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="display-4 font-weight-bold text-center mb-4">{{ product["track_name"] }}</h1>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Details</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Track Name:</strong> {{ product["track_name"] }}</li>
+                            <li class="list-group-item"><strong>Version:</strong> {{ product["ver"] }}</li>
+                            <li class="list-group-item"><strong>Size:</strong> {{ product["size_bytes"] }} bytes</li>
+                            <li class="list-group-item"><strong>Description:</strong> {{ product["app_desc"] }}</li>
+                            <li class="list-group-item"><strong>Primary Genre:</strong> {{ product["prime_genre"] }}</li>
+                            <li class="list-group-item"><strong>Content Rating:</strong> {{ product["cont_rating"] }}</li>
+                            <li class="list-group-item"><strong>Supported Devices:</strong> {{ product["sup_devices_num"] }}</li>
+                            <li class="list-group-item"><strong>iPad Screenshot URLs:</strong> {{ product["ipadSc_urls_num"] }}</li>
+                            <li class="list-group-item"><strong>Language Count:</strong> {{ product["lang_num"] }}</li>
+                            <li class="list-group-item"><strong>VPP Device Based Licensing:</strong> {{ product["vpp_lic"] }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Price and Ratings</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Price:</strong> {{ product["price"] }} {{ product["currency"] }}</li>
+                            <li class="list-group-item"><strong>Rating Count (All Versions):</strong> {{ product["rating_count_tot"] }}</li>
+                            <li class="list-group-item"><strong>Rating Count (Current Version):</strong> {{ product["rating_count_ver"] }}</li>
+                            <li class="list-group-item"><strong>User Rating (All Versions):</strong> {{ product["user_rating"] }}</li>
+                            <li class="list-group-item"><strong>User Rating (Current Version):</strong> {{ product["user_rating_ver"] }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-lg btn-block btn-dark" href="/">Return to List</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

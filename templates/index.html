@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>app_store</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        .card {
+            width: 18rem;
+            height: 22rem;
+            font-size: 0.8rem;
+        }
+        
+        .pagination a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mx-auto" style="width: 100%;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">app store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Software List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">readme.md</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-3">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            {% for d in data %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ d[2] }}</h5>
+                        <p class="card-text">{{ d[3] }}</p>
+                        <p class="card-text">Price: {{ d[5] }} {{ d[4] }}</p>
+                        <p class="card-text">Rating: {{ d[8] }}</p>
+                        <p class="card-text">Version: {{ d[10] }}</p>
+                        <a href="/detail/{{d[1]}}" class="btn btn-dark">detail</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="d-flex justify-content-center my-3">
+            {{ pagination["links"] }}
+        </div>
+    </div>
+</body>
+
+</html>
