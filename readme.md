@@ -5,7 +5,7 @@ git clone https://github.com/grace-lliu/CS551P-assignment.git
 ```
 To access the project catalog:
 ```shell
-cd app
+cd CS551P-assignment
 ```
 install and set the local version of Python to 3.7.0 using the pyenv version manager.
 
