@@ -7,6 +7,13 @@ To access the project catalog:
 ```shell
 cd app
 ```
+install and set the local version of Python to 3.7.0 using the pyenv version manager.
+
+``` shell
+pyenv instal1 3.7.8
+pyeny local 3.7.0
+```
+
 Create and activate the Python virtual environment:
 ```shell
 python3 -m venv .venv
@@ -14,6 +21,7 @@ source .venv/bin/activate
 ```
 Install the Python dependencies required for the project:
 ```shell
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 Initialize and import data
