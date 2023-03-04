@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 * 3e97b9a : update readme.md and upload report
+=======
+* f8700c6 : remove al-report
+* 0a24091 : Add files via upload
+* d4389c0 : Add files via upload
+* a0208d6 : Update readme.md
+>>>>>>> 30990aeaa6f544b8d699f4b0e930268800d87418
 * 7d318bc : add report.md ,update readme.md
 * d052192 : update readme.md
 * b0be551 : Modifying the page structure
